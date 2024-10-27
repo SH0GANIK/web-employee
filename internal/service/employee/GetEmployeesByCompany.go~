@@ -1,0 +1,10 @@
+package employee
+
+import (
+	"context"
+	"web-employee/internal/model"
+)
+
+func (r *serv) GetEmployeesByCompany(ctx context.Context, companyId string) ([]*model.Employee, error) {
+	return nil, nil
+}

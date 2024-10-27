@@ -1,0 +1,10 @@
+env: "local"
+grpc-server:
+  address: "0.0.0.0:8080"
+database:
+  username: "${POSTGRES_USER}"
+  host: "${POSTGRES_HOST}"
+  port: "${POSTGRES_PORT}"
+  dbname: "${POSTGRES_DB}"
+  sslmode: "disable"
+  dsn: "host=localhost port=5432 dbname=employee user=employee-user password=employee-password sslmode=disable"
