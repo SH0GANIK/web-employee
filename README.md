@@ -1,12 +1,19 @@
 Запуск проекта:
 make docker-build
 docker-compose up --build
+
 API:
+
 POST /employees
+
 DELETE /employees/{employeeId}
+
 GET /employees/company/{companyId}
+
 GET /employees/{companyId}/{departmentName}
+
 PUT /employees/{employeeId}
+
 Добавление сотрудников
    - Метод: POST
    - Описание: Позволяет добавить нового сотрудника.  
@@ -26,21 +33,25 @@ PUT /employees/{employeeId}
     "Phone": "+74951234567"
   }
 }' http://localhost:8080/employees
+
 Удаление сотрудника:
   - Метод: DELETE
    - Описание: Удаляет сотрудника по заданному Id.
    - Пример запроса:
   curl -X DELETE http://localhost:8080/employees/1
+
 Вывод списка сотрудников для указанной компании:
     - Метод: GET
    - Описание: Возвращает список сотрудников для указанной компании. Все доступные поля.
    - Пример запроса:
   curl http://localhost:8080/employees/company/123
+
 Вывод списка сотрудников по отделу компании
    - Метод: GET
    - Описание: Возвращает список сотрудников для указанного отдела компании. Все доступные поля.
    - Пример запроса:
   curl http://localhost:8080/employees/company/123/HR
+
 Изменение данных сотрудника
    - Метод: PATCH
    - Описание: Позволяет изменить информацию о сотруднике по его Id. Изменения применяются только к указанным полям.
